@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "student",
+    "slug": "student",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package":"com.student",
+      "googleServicesFile": "./google-services.json"
+    },
+    "ios": {
+      "package":"student",
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "plugins": [
+      "@react-native-firebase/app"
+    ]
+  }
+}

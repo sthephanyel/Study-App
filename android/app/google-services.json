@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "812287475535",
+    "project_id": "appestudo-81a3f",
+    "storage_bucket": "appestudo-81a3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812287475535:android:3e384042514a54b3338f3a",
+        "android_client_info": {
+          "package_name": "appestudoapk.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812287475535-0s69knvj6np93e5f8oia112kl0d34q6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLzjqKqsDa0GKl7zE7MTjEK91IAF-c3ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812287475535-0s69knvj6np93e5f8oia112kl0d34q6l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "812287475535-fu859i1i70e26vrljv1dga83qm6fkms4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "appestudoapk.com"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812287475535:android:ee60624ba0d72488338f3a",
+        "android_client_info": {
+          "package_name": "br.com.appestudo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812287475535-0s69knvj6np93e5f8oia112kl0d34q6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLzjqKqsDa0GKl7zE7MTjEK91IAF-c3ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812287475535-0s69knvj6np93e5f8oia112kl0d34q6l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "812287475535-fu859i1i70e26vrljv1dga83qm6fkms4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "appestudoapk.com"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812287475535:android:8dd8cd4cc496dea2338f3a",
+        "android_client_info": {
+          "package_name": "com.student"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812287475535-0s69knvj6np93e5f8oia112kl0d34q6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLzjqKqsDa0GKl7zE7MTjEK91IAF-c3ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812287475535-0s69knvj6np93e5f8oia112kl0d34q6l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "812287475535-fu859i1i70e26vrljv1dga83qm6fkms4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "appestudoapk.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
