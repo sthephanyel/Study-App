@@ -8,6 +8,7 @@ import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import { Loading } from "../components/Loading";
 import {SignIn} from '../screens/SignIn';
 import {AppRoutes} from './app.routes';
+import { AppRoutesSign } from "./app.routesSign";
 
 
 
@@ -34,7 +35,7 @@ export function Routes(){
     return(
         <NavigationContainer>
             {/* If ternario */}
-            {user ?<AppRoutes/>:<SignIn/>}
+            {user ?<AppRoutes/>:<AppRoutesSign/>}
         </NavigationContainer>
     );
 }

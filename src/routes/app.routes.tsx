@@ -1,17 +1,26 @@
 //Disponiveis se o usuario logado
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import CustonTabBar from '../components/CustonTabBar';
 
 
 import {Home} from '../screens/Home';
+import { ListHour } from '../screens/ListHour';
+import { NewHour } from '../screens/NewHour';
+import { Stopwatch } from '../screens/Stopwatch';
+import { UserDetails } from '../screens/UserDetails';
 
 
-const {Navigator, Screen} = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 
 export function AppRoutes(){
     return(
-        <Navigator screenOptions={{headerShown: false}}>
-            <Screen name="home" component={Home}/>
-        </Navigator>
+        <Tab.Navigator screenOptions={{headerShown: false}} tabBar={props=><CustonTabBar {...props}/>}>
+            <Tab.Screen name="home" component={Home}/>
+            <Tab.Screen name="stopwatch" component={Stopwatch}/>
+            <Tab.Screen name="newhour" component={NewHour}/>
+            <Tab.Screen name="listhour" component={ListHour}/>
+            <Tab.Screen name="userdetails" component={UserDetails}/>
+        </Tab.Navigator>
     );
 }

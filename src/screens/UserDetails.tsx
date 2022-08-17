@@ -15,7 +15,7 @@ import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import { Loading } from '../components/Loading';
 
-export function Home() {
+export function UserDetails() {
 
     function handleLogount(){
         auth()
@@ -28,12 +28,25 @@ export function Home() {
     
   return (
     <VStack 
-      flex={1} 
-      justifyContent="center" 
-      alignItems="center" 
+      flex={1}
       pb={6}
       bg="#0D1019">
-        <Text color="#ffffff">Hello Home</Text>
+        <HStack
+            w="full"
+            justifyContent="space-between"
+            alignItems="center"
+            // bg="gray.600"
+            pt={8}
+            pb={5}
+            px={6}
+        >
+            <Text color="#ffffff">Hora de Estudar</Text>
+            <IconButton
+                icon={<SignOut size={26} color="#ffffff"/>}
+                onPress={handleLogount}
+            />
+        </HStack>
+        
     </VStack>
   );
 }

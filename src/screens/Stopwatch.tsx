@@ -15,7 +15,7 @@ import auth from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import { Loading } from '../components/Loading';
 
-export function Home() {
+export function Stopwatch() {
 
     function handleLogount(){
         auth()
@@ -27,13 +27,14 @@ export function Home() {
     }
     
   return (
-    <VStack 
+    <VStack
       flex={1} 
       justifyContent="center" 
       alignItems="center" 
       pb={6}
-      bg="#0D1019">
-        <Text color="#ffffff">Hello Home</Text>
+      bg="#0D1019"
+    >
+        <Text color="#ffffff">Stopwatch</Text>
     </VStack>
   );
 }

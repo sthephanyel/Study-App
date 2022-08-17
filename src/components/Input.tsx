@@ -8,13 +8,15 @@ export function Input({...rest}: IInputProps) {
     <NativeBaseInput
         size="md"
         borderWidth={0}
+        borderBottomWidth={2}
+        borderBottomColor="#ffffff"
         fontSize="md"
         fontFamily="body"
+        color="#ffffff"
         // placeholderTextColor="gray.300"
         _focus={{
-          borderWidth: 1,
           // borderColor: 'green.500',
-          // bg :"gray.700"
+          bg :"gray.700"
         }}
         {...rest}
     />

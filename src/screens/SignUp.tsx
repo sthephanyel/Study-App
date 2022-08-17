@@ -8,51 +8,50 @@ import { Alert } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import { useNavigation } from '@react-navigation/native';
 
-export function SignIn(){
+export function SignUp(){
     const [isLoading, setIsLoading] = useState(false);
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const navigation = useNavigation();
-
+    const navigate = useNavigation();
     const {colors} = useTheme();
 
-    function handleSignIn(){
-        if(!email || !password){
-            // com o return, o if encerra nesse campo
-           return Alert.alert('Entrar','Informe E-mail e Senha');
-        }
-        setIsLoading(true);
-
-        auth()
-        .signInWithEmailAndPassword(email, password)
-        // Esse .then retorna algumas informações do usuário
-        .then(response =>{
-            console.log('VALORES RETORNADOS DO FIREBASE',response)
-        })
-        .catch((error)=>{
-            console.log(error);
-            console.log(error.code);
-            setIsLoading(false);
-
-            //validação para caso algum erro de sintaxe das credenciais seja verificado
-            if(error.code === 'auth/invalid-email'){
-                return Alert.alert('Entrar','E-mail inválido');
-            }
-            if(error.code === 'auth/wrong-password'){
-                return Alert.alert('Entrar','E-mail ou Senha inválido');
-            }
-            if(error.code === 'auth/user-not-found'){
-                return Alert.alert('Entrar','E-mail ou Senha inválido');
-            }
-
-            return Alert.alert('Entrar','Não foi possivel acessar');
-        })
+    function goBack(){
+        navigate.goBack();
     }
 
 
     function handleSignUp(){
-        navigation.navigate('signup');
+    console.log('Login');
+    if(!email || !password){
+        // com o return, o if encerra nesse campo
+       return Alert.alert('Entrar','Informe E-mail e Senha');
+    }
+    setIsLoading(true);
+
+    auth()
+    .createUserWithEmailAndPassword(email, password)
+    // Esse .then retorna algumas informações do usuário
+    .then(response =>{
+        console.log('VALORES RETORNADOS DO FIREBASE',response)
+        Alert.alert('Conta de usuário criada e conectada')
+    })
+    .catch((error)=>{
+        console.log(error);
+        console.log(error.code);
+        setIsLoading(false);
+
+        //validação para caso algum erro de sintaxe das credenciais seja verificado
+        if (error.code === 'auth/email-already-in-use') {
+            return Alert.alert('Cadastro','Esse endereço de email já esta em uso!');
+          }
+      
+          if (error.code === 'auth/invalid-email') {
+            return Alert.alert('Cadastro','Esse endereço de e-mail é inválido!');
+          }
+
+        return Alert.alert('Cadastro','Não foi possivel acessar');
+    })
     }
 
     return(
@@ -61,8 +60,14 @@ export function SignIn(){
                 Hora de Estudar
             </Heading>
             <Heading fontSize="xl" mb={6} color="#ffffff">
-                Login
+                Cadastro
             </Heading>
+
+            <Input 
+                placeholder="Nome"
+                mb={4}
+                onChangeText={setName}
+            />
 
             <Input 
                 placeholder="E-mail"
@@ -77,23 +82,23 @@ export function SignIn(){
             />
 
             <Button
-                title="Entrar"
+                title="Cadastro"
                 w="full"
                 bg="#ffffff"
                 colorTitle="#000000"
                 
-                onPress={handleSignIn}
+                onPress={handleSignUp}
                 borderRadius="20"
                 // Cria um loading no botao e não permite clicar de novo
                 isLoading={isLoading}
             />
             <Button
                 mt={5}
-                title="Cadastrar"
+                title="Voltar"
                 w="full"
                 bg="transparent"
                 colorTitle="#ffffff"
-                onPress={handleSignUp}
+                onPress={goBack}
                 // Cria um loading no botao e não permite clicar de novo
                 isLoading={isLoading}
             />
