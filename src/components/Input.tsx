@@ -10,6 +10,7 @@ export function Input({...rest}: IInputProps) {
         borderWidth={0}
         borderBottomWidth={2}
         borderBottomColor="#ffffff"
+        borderColor="#ffffff"
         fontSize="md"
         fontFamily="body"
         color="#ffffff"

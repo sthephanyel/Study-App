@@ -83,6 +83,7 @@ export function SignUp(){
 
             <Button
                 title="Cadastro"
+                fontTamanho={`${20}`}
                 w="full"
                 bg="#ffffff"
                 colorTitle="#000000"
@@ -94,6 +95,7 @@ export function SignUp(){
             />
             <Button
                 mt={5}
+                fontTamanho={`${20}`}
                 title="Voltar"
                 w="full"
                 bg="transparent"

@@ -40,7 +40,7 @@ export default ({state, navigation})=>{
     }
 
     return(
-        <TabArea>
+        <TabArea backBehavior="history">
             <TabItem onPress={()=>goTo('home')}>
                 <House size={state.index===0? 50 : 36} color="#ffffff" style={{opacity: state.index===0? 1 : 0.5}} />
             </TabItem>

@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
 export function AppRoutes(){
     return(
-        <Tab.Navigator screenOptions={{headerShown: false}} tabBar={props=><CustonTabBar {...props}/>}>
+        <Tab.Navigator backBehavior="history" screenOptions={{headerShown: false}} tabBar={props=><CustonTabBar {...props}/>}>
             <Tab.Screen name="home" component={Home}/>
             <Tab.Screen name="stopwatch" component={Stopwatch}/>
             <Tab.Screen name="newhour" component={NewHour}/>

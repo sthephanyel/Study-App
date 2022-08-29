@@ -78,6 +78,7 @@ export function SignIn(){
 
             <Button
                 title="Entrar"
+                fontTamanho={`${20}`}
                 w="full"
                 bg="#ffffff"
                 colorTitle="#000000"
@@ -89,6 +90,7 @@ export function SignIn(){
             />
             <Button
                 mt={5}
+                fontTamanho={`${20}`}
                 title="Cadastrar"
                 w="full"
                 bg="transparent"

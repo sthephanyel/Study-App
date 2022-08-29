@@ -5,6 +5,7 @@ export declare global {
         interface RootParamList{
             signup: undefined;
             newhour: undefined;
+            home: undefined;
             stopwatch: undefined;
             listhour:undefined;
             userdetails: undefined;
